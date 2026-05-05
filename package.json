@@ -2,6 +2,11 @@
   "name": "dcf-builder-root",
   "version": "1.0.0",
   "private": true,
+  "description": "Desktop DCF valuation workspace with bundled frontend and backend.",
+  "author": {
+    "name": "Ryan Rodrigues",
+    "email": "ryanrodrigues25200525@gmail.com"
+  },
   "scripts": {
     "dev": "concurrently -n \"frontend,backend\" -c \"bgBlue,bgGreen\" \"npm run dev:frontend\" \"npm run dev:backend\"",
     "dev:frontend": "cd frontend && npm run dev",
@@ -16,7 +21,7 @@
     "verify": "npm run lint:frontend && npm run test:frontend && npm run build:frontend && npm run test:backend",
     "electron:dev": "cross-env NODE_ENV=development electron .",
     "electron:pack": "electron-builder --dir",
-    "electron:dist": "electron-builder",
+    "electron:dist": "electron-builder --publish never",
     "electron:build": "npm run build:desktop && npm run electron:dist",
     "icons:generate": "bash scripts/generate_icons.sh",
     "build:desktop": "npm run build:frontend && bash scripts/prepare_desktop_frontend.sh && npm run build:backend:desktop",
