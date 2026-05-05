@@ -19,13 +19,10 @@ jobs:
         include:
           - os: macos-14
             artifact_name: macos
-            dist_glob: dist-electron/*
           - os: windows-latest
             artifact_name: windows
-            dist_glob: dist-electron/*
           - os: ubuntu-latest
             artifact_name: linux
-            dist_glob: dist-electron/*
 
     steps:
       - name: Checkout
@@ -69,7 +66,16 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dcf-builder-${{ matrix.artifact_name }}
-          path: ${{ matrix.dist_glob }}
+          path: |
+            dist-electron/*.AppImage
+            dist-electron/*.blockmap
+            dist-electron/*.deb
+            dist-electron/*.dmg
+            dist-electron/*.exe
+            dist-electron/*.rpm
+            dist-electron/*.tar.gz
+            dist-electron/*.zip
+            dist-electron/latest*.yml
           if-no-files-found: error
 
   publish:
