@@ -68,14 +68,11 @@ jobs:
           name: dcf-builder-${{ matrix.artifact_name }}
           path: |
             dist-electron/*.AppImage
-            dist-electron/*.blockmap
             dist-electron/*.deb
             dist-electron/*.dmg
             dist-electron/*.exe
             dist-electron/*.rpm
             dist-electron/*.tar.gz
-            dist-electron/*.zip
-            dist-electron/latest*.yml
           if-no-files-found: error
 
   publish:
@@ -93,4 +90,22 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: release-artifacts/**/*
-          generate_release_notes: true
+          name: DCF Builder Pro Desktop ${{ github.ref_name }}
+          body: |
+            ## Download DCF Builder Pro
+
+            Pick the installer for your computer:
+
+            | System | File to download |
+            | --- | --- |
+            | macOS | `.dmg` |
+            | Windows | `Setup .exe` |
+            | Linux | `.AppImage` or `.deb` |
+
+            The app includes everything it needs to run. You do not need to install Python, Node.js, npm, or developer tools.
+
+            ## First Open
+
+            This app is open source and not code-signed yet, so macOS or Windows may show a trust warning the first time you open it.
+
+            On macOS, right-click the app and choose **Open**. On Windows, choose **More info**, then **Run anyway**.

@@ -1,5 +1,5 @@
 {
-  "name": "dcf-builder-root",
+  "name": "dcf-builder-pro-desktop",
   "version": "1.0.0",
   "private": true,
   "description": "Desktop DCF valuation workspace with bundled frontend and backend.",
@@ -46,15 +46,13 @@
       "identity": "-",
       "icon": "build/icon.icns",
       "target": [
-        "dmg",
-        "zip"
+        "dmg"
       ]
     },
     "win": {
       "icon": "build/icon.ico",
       "target": [
-        "nsis",
-        "portable"
+        "nsis"
       ]
     },
     "linux": {
