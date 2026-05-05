@@ -25,4 +25,4 @@ rsync -av --delete \
   "$SOURCE_DIR"/ "$TARGET_DIR"/
 
 echo "Sanitized public export written to: $TARGET_DIR"
-echo "Review README.md, LOCAL_SETUP.md, backend/.env.example, frontend/.env.example before pushing."
+echo "Review README.md, backend/.env.example, frontend/.env.example before pushing."

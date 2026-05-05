@@ -45,7 +45,6 @@ These are safe to publish after review:
 - sample env files
 - Docker files
 - public-facing README/docs
-- local setup docs
 - CI workflow
 
 ## Files to Review Before Public Push
@@ -53,7 +52,6 @@ These are safe to publish after review:
 Review these carefully each time:
 
 - `README.md`
-- `LOCAL_SETUP.md`
 - `API_DOCS.md`
 - `API_STACK_AND_FLOW.md`
 - `backend/.env.example`
@@ -68,7 +66,6 @@ They currently use placeholder identities and example hostnames, which is fine, 
 Keep in the public repo:
 
 - `README.md`
-- `LOCAL_SETUP.md`
 - `API_DOCS.md`
 - `API_STACK_AND_FLOW.md`
 - `backend/`

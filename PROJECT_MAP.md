@@ -42,7 +42,7 @@ Current design intent:
 14. The backend export stack uses `backend/app/services/excel_export/*` and the template workbook `backend/app/assets/templates/dcf-export-template.xlsx` to produce the final Excel file.
 
 ## Top-Level Files
-- `README.md`: main project overview, local setup, endpoint summary, and deployment notes.
+- `README.md`: public-facing app overview and download link.
 - `ARCHITECTURE_FLOW.md`: current runtime architecture and the simplified backend-first recovery model.
 - `API_DOCS.md`: API-facing behavior and endpoint reference.
 - `API_STACK_AND_FLOW.md`: API and request-flow notes across the stack.
@@ -316,4 +316,3 @@ If you want to understand the system quickly, read these in order:
 10. `frontend/src/services/integration/sec/native-normalizer.ts`
 11. `frontend/src/services/dcf/engine.ts`
 12. `backend/app/api/routers/export_router.py`
-
